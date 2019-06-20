@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "treemacs-icons-dired" "20190619.1516" "Treemacs icons for dired" '((treemacs "0.0") (emacs "25.2") (cl-lib "0.5")) :stars '(#("604" 0 3 (font-lock-face paradox-star-face))) :commit "e01ad21ea3cc0eba8cd460737116b51be32ffb45" :authors '(("Alexander Miller" . "alexanderm@web.de")) :maintainer '("Alexander Miller" . "alexanderm@web.de") :url "https://github.com/Alexander-Miller/treemacs")

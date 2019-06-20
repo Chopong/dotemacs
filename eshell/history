@@ -1,0 +1,10 @@
+sudo apt install gcc
+sudo apt install make
+sudo apt install python-keyring
+sudo apt install hddtemp
+sudo apt install curl
+sudo apt install lm-sensors
+sudo chmod u+s /usr/sbin/hddtemp
+sudo sensors-detect
+sudo apt install conky
+conky
