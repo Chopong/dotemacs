@@ -10,7 +10,7 @@
 
 (eval-when-compile (require 'cl))
 (defun add-subdirs-to-load-path (parent-dir)
-  "Adds every non-hidden subdir of PARENT-DIR to `load-path'."
+  "Add every non-hidden subdir of PARENT-DIR to `load-path'."
   (let* ((default-directory parent-dir))
     (progn
       (setq load-path

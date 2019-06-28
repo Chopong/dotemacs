@@ -15,16 +15,12 @@
 	("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/")))
 
 (require 'cl-lib)
-
-
 (setq package-enable-at-startup nil)
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 (eval-when-compile (require 'use-package))
-
-
 
 (provide 'init-elpa)
 ;;; init-elpa.el ends here

@@ -7,11 +7,11 @@
 
 ;;; Code:
 
-(use-package fullframe            :ensure t :defer nil
+(use-package fullframe            :ensure t
   :config
   (fullframe list-packages quit-window))
 
-(use-package exec-path-from-shell :ensure t :defer 1
+(use-package exec-path-from-shell :ensure t
   :config
   (dolist (var '("SSH_AUTH_SOCK" "SSH_AGENT_PID" "GPG_AGENT_INFO" "LANG" "LC_CTYPE"))
     (add-to-list 'exec-path-from-shell-variables var))

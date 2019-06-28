@@ -90,4 +90,4 @@
       (browse-url (concat "file://" file-name)))))
 
 (provide 'init-functions)
-;; init-functions.el ends here
+;;; init-functions.el ends here

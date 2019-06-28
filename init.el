@@ -16,9 +16,6 @@
 				 (*is-a-mac* "/Volumes/SHARE/DotEmacs/")
                                  (*is-a-win* "E:/DotEmacs/")
 				 (t "~/.emacs.d/")))
-
-(setq default-directory (cond (*is-a-lin* "~/Desktop/")
-                              (t "~/Desktop/")))
 (add-to-list 'load-path
 	     (expand-file-name "config" user-emacs-directory))
 ;;------------------------------------------------------------------------------

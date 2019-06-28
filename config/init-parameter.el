@@ -11,7 +11,7 @@
 ;;; Commentary:
 
 
-(setq debug-on-error t)
+(setq debug-on-error nil)
 
 ;; gc
 (let ((normal-gc-cons-threshold (* 20 1024 1024))
@@ -28,11 +28,8 @@
 (setq custom-file
       (expand-file-name "custom.el" user-assets-directory))
 
-(when (boundp 'scroll-bar-mode) (scroll-bar-mode 0))
-
 (setq user-mail-address "chopong@aliyun.com")
 (setq user-full-name "Chopong")
-
 
 (setq-default make-backup-files nil)
 

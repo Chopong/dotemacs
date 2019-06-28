@@ -8,7 +8,7 @@
 ;;; Code:
 
 
-(use-package yasnippet :ensure t :defer t
+(use-package yasnippet :ensure t :defer 2
   :hook ((prog-mode   . yas-minor-mode)
          (python-mode . yas-minor-mode))
   :init
