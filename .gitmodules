@@ -1,0 +1,3 @@
+[submodule "plugins/sidebar"]
+	path = plugins/sidebar
+	url = https://github.com/sebastiencs/sidebar.el.git

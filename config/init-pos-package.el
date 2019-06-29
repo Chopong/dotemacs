@@ -75,7 +75,6 @@
   :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
   :ensure t :defer t)
 
-(use-package fireplace :ensure t :defer t)
 (use-package paradox :ensure t :defer t)
 (use-package async :ensure t :defer t)
 ;;(use-package helpful :ensure t :defer t)
@@ -102,6 +101,7 @@
 ;;  ;; (setq highlight-indent-guides-auto-character-face-perc 20)
 ;;  (setq highlight-indent-guides-responsive 'stack))
 
+
 (use-package indent-guide :ensure t :defer t
   :hook (after-init . indent-guide-global-mode))
 
@@ -114,7 +114,71 @@
 ;; (use-package interleave :ensure t :defer t)
 (use-package google-translate :ensure t :defer t)
 (use-package emamux :ensure t :defer t)
+(use-package fill-column-indicator :ensure t :defer t)
+(use-package keyfreq :ensure t
+  :config (keyfreq-mode 1)
+  (keyfreq-autosave-mode 1))
 
+(use-package hackernews :ensure t :defer t)
+(use-package academic-phrases :ensure t :defer t)
+(use-package bm
+  :ensure t
+  :demand t
+
+  :init
+  ;; restore on load (even before you require bm)
+  (setq bm-restore-repository-on-load t)
+
+
+  :config
+  ;; Allow cross-buffer 'next'
+  (setq bm-cycle-all-buffers t)
+
+  ;; where to store persistant files
+  (setq bm-repository-file "~/.emacs.d/bm-repository")
+
+  ;; save bookmarks
+  (setq-default bm-buffer-persistence t)
+
+  ;; Loading the repository from file when on start up.
+  (add-hook 'after-init-hook 'bm-repository-load)
+
+  ;; Saving bookmarks
+  (add-hook 'kill-buffer-hook #'bm-buffer-save)
+
+  ;; Saving the repository to file when on exit.
+  ;; kill-buffer-hook is not called when Emacs is killed, so we
+  ;; must save all bookmarks first.
+  (add-hook 'kill-emacs-hook #'(lambda nil
+                                 (bm-buffer-save-all)
+                                 (bm-repository-save)))
+
+  ;; The `after-save-hook' is not necessary to use to achieve persistence,
+  ;; but it makes the bookmark data in repository more in sync with the file
+  ;; state.
+  (add-hook 'after-save-hook #'bm-buffer-save)
+
+  ;; Restoring bookmarks
+  (add-hook 'find-file-hooks   #'bm-buffer-restore)
+  (add-hook 'after-revert-hook #'bm-buffer-restore)
+
+  ;; The `after-revert-hook' is not necessary to use to achieve persistence,
+  ;; but it makes the bookmark data in repository more in sync with the file
+  ;; state. This hook might cause trouble when using packages
+  ;; that automatically reverts the buffer (like vc after a check-in).
+  ;; This can easily be avoided if the package provides a hook that is
+  ;; called before the buffer is reverted (like `vc-before-checkin-hook').
+  ;; Then new bookmarks can be saved before the buffer is reverted.
+  ;; Make sure bookmarks is saved before check-in (and revert-buffer)
+  (add-hook 'vc-before-checkin-hook #'bm-buffer-save)
+
+
+  :bind (("<f2>" . bm-next)
+         ("S-<f2>" . bm-previous)
+         ("C-<f2>" . bm-toggle)))
+
+(use-package linum-relative :ensure t :defer t)
+(use-package pomidor :ensure t :defer t)
 
 (provide 'init-pos-package)
 ;;; init-pos-package.el ends here

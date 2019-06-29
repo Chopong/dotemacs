@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-
-
 (defconst *is-a-mac* (eq system-type 'darwin))
 (defconst *is-a-lin* (eq system-type 'gnu/linux))
 (defconst *is-a-win* (eq system-type 'windows-nt))
@@ -68,6 +66,7 @@
 (require 'init-org-download)
 (require 'init-org-mindmap)
 (require 'init-org-pomodoro)
+(require 'init-org-ql)
 (require 'init-writeroom)
 
 
@@ -83,16 +82,15 @@
 (require 'init-emacs-lisp)
 (require 'init-clojure)
 (require 'init-css)
-(require 'init-javascript)
+;; (require 'init-javascript)
 (require 'init-python)
 (require 'init-ruby)
 (require 'init-sql)
 (require 'init-ess)
 
-
 ;;------------------------------------------------------------------------------
-(require 'init-cnfonts)
-(require 'init-game)
+;; (require 'init-cnfonts)
+;; (require 'init-game)
 (require 'init-pos-package)
 (when (file-exists-p custom-file)
   (load custom-file))

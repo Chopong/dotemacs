@@ -49,4 +49,4 @@ Selectively runs either `after-make-console-frame-hooks' or
 
 
 (provide 'init-frame-term)
-;; init-frame-term.el ends here
+;;; init-frame-term.el ends here

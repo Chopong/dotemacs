@@ -33,8 +33,10 @@
 
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
+
 (when (fboundp 'set-scroll-bar-mode)
   (set-scroll-bar-mode nil))
+
 (setq column-number-mode t)
 (setq line-number-mode t)
 ;; (global-linum-mode t)
@@ -108,11 +110,8 @@
 
 
 (use-package disable-mouse :ensure t)
-
 (set-cursor-color "gray")
 (set-mouse-color "gold1")
-
-
 
 (use-package thumbs :ensure nil :defer t
   :init (auto-image-file-mode t))
@@ -121,4 +120,4 @@
 
 
 (provide 'init-frame-gui)
-;; init-frame-gui.el ends here
+;;; init-frame-gui.el ends here

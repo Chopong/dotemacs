@@ -8,8 +8,9 @@
 ;;; Code:
 
 (use-package symon :ensure t :defer t)
-
-
+(use-package fireplace :ensure t :defer t)
+(use-package speed-type :ensure t :defer t)
+(use-package buffer-expose :defer t)
 
 (provide 'init-game)
 ;;; init-game.el ends here

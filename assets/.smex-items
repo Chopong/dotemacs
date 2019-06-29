@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- ag
- global-linum-mode
- global-hl-line-mode
- line-number-mode
- column-number-mode
  package-list-packages
- list-packages
+ speed-type-text
+ pomidor
+ org-pomodoro
+ hackernews
+ keyfreq-html
+ highlight-indent-guides-mode
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (ivy-avy . 1)
  (sanityinc/counsel-search-project . 1)
  (list-packages . 13)
- (package-autoremove . 4)
+ (package-autoremove . 5)
  (esup . 19)
  (rainbow-delimiters-mode . 1)
  (ivy-recentf . 3)
@@ -30,7 +30,7 @@
  (headerise-elisp . 1)
  (dash-at-point . 1)
  (origami-mode . 2)
- (ag . 18)
+ (ag . 20)
  (other-window . 2)
  (other-frame . 1)
  (ffap-dired-other-frame . 1)
@@ -58,7 +58,7 @@
  (cfw:open-calendar-buffer . 3)
  (elfeed . 3)
  (elfeed-update . 1)
- (fireplace . 1)
+ (fireplace . 2)
  (ein:run . 1)
  (paradox-sort-by-★ . 1)
  (paradox-list-packages . 7)
@@ -72,7 +72,7 @@
  (golden-ratio . 1)
  (golden-ratio-mode . 1)
  (highlight-indentation-mode . 2)
- (highlight-indent-guides-mode . 3)
+ (highlight-indent-guides-mode . 5)
  (cnfonts-enable . 1)
  (cnfonts-edit-profile . 1)
  (symon-mode . 1)
@@ -83,9 +83,16 @@
  (debug . 1)
  (debugger-mode . 2)
  (eshell . 1)
- (package-list-packages . 1)
+ (package-list-packages . 7)
  (column-number-mode . 2)
  (line-number-mode . 2)
  (global-hl-line-mode . 1)
  (global-linum-mode . 1)
+ (spaceline-all-the-icons-theme . 1)
+ (visual-fill-column-mode . 2)
+ (keyfreq-html . 1)
+ (hackernews . 1)
+ (org-pomodoro . 1)
+ (pomidor . 1)
+ (speed-type-text . 1)
 )

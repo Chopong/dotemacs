@@ -7,10 +7,10 @@
 
 ;;; Code:
 
-(use-package json-mode       :ensure t :defer 2)
-(use-package coffee-mode     :ensure t :defer 2)
-(use-package typescript-mode :ensure t :defer 2)
-(use-package prettier-js     :ensure t :defer 2)
+(use-package json-mode       :ensure t :defer t)
+(use-package coffee-mode     :ensure t :defer t)
+(use-package typescript-mode :ensure t :defer t)
+(use-package prettier-js     :ensure t :defer t)
 
 ;; Need to first remove from list if present, since elpa adds entries too, which
 ;; may be in an arbitrary order
