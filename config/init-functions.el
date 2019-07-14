@@ -25,7 +25,6 @@
   (find-file (expand-file-name "init.el" user-emacs-directory)))
 (global-set-key (kbd "<f2>") 'open-init-el)
 
-
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (defun time-subtract-millis (b a)

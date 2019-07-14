@@ -40,5 +40,9 @@
 (use-package ein :ensure t :defer t)
 
 
+
+;; (use-package pylookup :ensure t :defer t)
+
+
 (provide 'init-python)
 ;;; init-python.el ends here

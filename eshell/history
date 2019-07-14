@@ -8,3 +8,4 @@ sudo chmod u+s /usr/sbin/hddtemp
 sudo sensors-detect
 sudo apt install conky
 conky
+sudo pacman -S the_silver_searcher

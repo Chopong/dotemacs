@@ -69,9 +69,9 @@ instead."
   :after ivy
   :config
   (defun swiper-at-point (sym)
-      "Use `swiper' to search for the symbol at point."
-      (interactive (list (thing-at-point 'symbol)))
-      (swiper sym))
+    "Use `swiper' to search for the symbol at point."
+    (interactive (list (thing-at-point 'symbol)))
+    (swiper sym))
   :bind (:map ivy-mode-map
 	      ("M-s /" . 'swiper-at-point)))
 

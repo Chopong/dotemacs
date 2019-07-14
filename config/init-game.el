@@ -11,6 +11,11 @@
 (use-package fireplace :ensure t :defer t)
 (use-package speed-type :ensure t :defer t)
 (use-package buffer-expose :defer t)
+(use-package gif-screencast :ensure t
+  ;; needs gifsicle scrot and convert (ImageMagick)
+  :defer t)
+
+
 
 (provide 'init-game)
 ;;; init-game.el ends here

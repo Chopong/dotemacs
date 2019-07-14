@@ -173,12 +173,31 @@
   (add-hook 'vc-before-checkin-hook #'bm-buffer-save)
 
 
-  :bind (("<f2>" . bm-next)
+  :bind (;;("<f2>" . bm-next)
          ("S-<f2>" . bm-previous)
          ("C-<f2>" . bm-toggle)))
 
 (use-package linum-relative :ensure t :defer t)
 (use-package pomidor :ensure t :defer t)
+
+(use-package super-save :ensure t :defer t)
+(use-package unicode-fonts :ensure t
+  :config (unicode-fonts-setup)
+  :defer t)
+;; (use-package hyde :ensure t :defer t
+;;   :config (setq hyde-home "~/Documents/Blog"))
+
+;;(require 'hyde)
+
+;; (use-package mu4e :ensure t :defer t)
+;; (use-package mu4e-alert :ensure t :defer t)
+
+(use-package yafolding :ensure t :defer t)
+
+;; (use-package eval-in-repl :ensure t :defer t
+;;   :config (setq eir-repl-placement 'left))
+;; (require 'eval-in-repl-python)
+;; (require 'eval-in-repl-shell)
 
 (provide 'init-pos-package)
 ;;; init-pos-package.el ends here

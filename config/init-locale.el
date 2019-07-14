@@ -29,7 +29,9 @@
   (set-file-name-coding-system 'utf-8)
   (setq locale-coding-system 'utf-8)
   (set-selection-coding-system
-   (if (eq system-type 'windows-nt) 'utf-16-le 'utf-8))
+   (if (eq system-type 'windows-nt)
+       'utf-16-le
+     'utf-8))
   (prefer-coding-system 'utf-8)
   (setq default-process-coding-system '(utf-8 . utf-8))
   )

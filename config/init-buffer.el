@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(use-package ibuffer :ensure nil :defer 1
+(use-package ibuffer :ensure nil :defer t
   :config
   (fullframe ibuffer ibuffer-quit)
   :bind ("C-x C-b" . 'ibuffer))

@@ -11,7 +11,7 @@
 (defconst *is-a-win* (eq system-type 'windows-nt))
 
 (setq user-emacs-directory (cond (*is-a-lin* "~/.emacs.d/")
-				 (*is-a-mac* "/Volumes/SHARE/DotEmacs/")
+				 (*is-a-mac* "~/.emacs.d/")
                                  (*is-a-win* "E:/DotEmacs/")
 				 (t "~/.emacs.d/")))
 (add-to-list 'load-path
@@ -55,7 +55,7 @@
 (require 'init-git-util)
 (require 'init-projectile)
 (require 'init-editing-tools)
-(require 'init-parentheses)
+;; (require 'init-parentheses)
 ;;------------------------------------------------------------------------------
 ;;counsel-org-clock
 ;;(use-package org-page
@@ -87,11 +87,14 @@
 (require 'init-ruby)
 (require 'init-sql)
 (require 'init-ess)
-
+(require 'init-tex)
 ;;------------------------------------------------------------------------------
 ;; (require 'init-cnfonts)
 ;; (require 'init-game)
+(require 'init-mail)
+(require 'init-leetcode)
 (require 'init-pos-package)
+
 (when (file-exists-p custom-file)
   (load custom-file))
 

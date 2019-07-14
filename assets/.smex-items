@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
+ mu4e
+ package-autoremove
  package-list-packages
- speed-type-text
- pomidor
- org-pomodoro
- hackernews
- keyfreq-html
- highlight-indent-guides-mode
+ message-mail
+ swiper-at-point
+ cnfonts-edit-profile
+ ag
 )
 
 ;; ----- smex-data -----
 (
- (delete-this-file . 16)
+ (delete-this-file . 17)
  (enable-ivy-flx-matching . 2)
  (ivy-avy . 1)
  (sanityinc/counsel-search-project . 1)
  (list-packages . 13)
- (package-autoremove . 5)
+ (package-autoremove . 7)
  (esup . 19)
  (rainbow-delimiters-mode . 1)
  (ivy-recentf . 3)
@@ -30,7 +30,7 @@
  (headerise-elisp . 1)
  (dash-at-point . 1)
  (origami-mode . 2)
- (ag . 20)
+ (ag . 21)
  (other-window . 2)
  (other-frame . 1)
  (ffap-dired-other-frame . 1)
@@ -73,8 +73,8 @@
  (golden-ratio-mode . 1)
  (highlight-indentation-mode . 2)
  (highlight-indent-guides-mode . 5)
- (cnfonts-enable . 1)
- (cnfonts-edit-profile . 1)
+ (cnfonts-enable . 2)
+ (cnfonts-edit-profile . 2)
  (symon-mode . 1)
  (color-identifiers-mode . 1)
  (google-this . 1)
@@ -82,17 +82,32 @@
  (fountain-mode . 1)
  (debug . 1)
  (debugger-mode . 2)
- (eshell . 1)
- (package-list-packages . 7)
+ (eshell . 2)
+ (package-list-packages . 11)
  (column-number-mode . 2)
  (line-number-mode . 2)
  (global-hl-line-mode . 1)
- (global-linum-mode . 1)
+ (global-linum-mode . 2)
  (spaceline-all-the-icons-theme . 1)
  (visual-fill-column-mode . 2)
- (keyfreq-html . 1)
+ (keyfreq-html . 2)
  (hackernews . 1)
  (org-pomodoro . 1)
  (pomidor . 1)
  (speed-type-text . 1)
+ (turn-off-smartparens-mode . 3)
+ (leetcode . 3)
+ (hyde-markdown-mode . 2)
+ (emacs-lisp-mode . 2)
+ (weibo-timeline . 1)
+ (gif-screencast . 2)
+ (gif-screencast-stop . 2)
+ (yank-pop . 1)
+ (pangu-spacing-mode . 1)
+ (swiper . 1)
+ (hyde . 1)
+ (swiper-at-point . 2)
+ (paredit-mode . 4)
+ (message-mail . 1)
+ (mu4e . 11)
 )
