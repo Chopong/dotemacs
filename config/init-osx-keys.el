@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-;;------------------------------------------------------------------------------
+;;--------------------------------------------------------------------------
 (when *is-a-mac*
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'none)
@@ -21,18 +21,15 @@
   (global-set-key (kbd "M-`") 'ns-next-frame)
   (global-set-key (kbd "M-h") 'ns-do-hide-emacs)
   (global-set-key (kbd "M-˙") 'ns-do-hide-others)
-  (after-load 'nxml-mode
-    (define-key nxml-mode-map (kbd "M-h") nil))
-  (global-set-key (kbd "M-ˍ") 'ns-do-hide-others) ;; what describe-key reports for cmd-option-h
-  )
+  (global-set-key (kbd "M-ˍ") 'ns-do-hide-others)) ;; what describe-key reports for cmd-option-h
 
-;;------------------------------------------------------------------------------
+;;--------------------------------------------------------------------------
 ;; Integrate with the Mac app "Dash"
+;;--------------------------------------------------------------------------
 
 (use-package dash-at-point :ensure t :defer t
   :if *is-a-mac*
   :bind ("C-c D" . 'dash-at-point))
 
-
 (provide 'init-osx-keys)
-;; init-osx-keys.el ends here
+;;; init-osx-keys.el ends here

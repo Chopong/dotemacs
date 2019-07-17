@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(use-package rainbow-mode :ensure t :defer 2
+(use-package rainbow-mode :ensure t :defer t
   :hook (css-mode-hook html-mode-hook sass-mode-hook)
   )
 

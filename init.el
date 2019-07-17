@@ -16,7 +16,7 @@
 				 (t "~/.emacs.d/")))
 (add-to-list 'load-path
 	     (expand-file-name "config" user-emacs-directory))
-;;------------------------------------------------------------------------------
+;;--------------------------------------------------------------------------
 (require 'init-parameter)
 (require 'init-plugins)
 ;;(package-initialize)
@@ -24,7 +24,7 @@
 (require 'init-functions)
 (require 'init-pre-package)
 (require 'init-locale)
-;;------------------------------------------------------------------------------
+;;--------------------------------------------------------------------------
 (require 'init-frame-term)
 (require 'init-frame-gui)
 (require 'init-buffer)
@@ -56,7 +56,7 @@
 (require 'init-projectile)
 (require 'init-editing-tools)
 ;; (require 'init-parentheses)
-;;------------------------------------------------------------------------------
+;;--------------------------------------------------------------------------
 ;;counsel-org-clock
 ;;(use-package org-page
 ;; :ensure t)
@@ -72,7 +72,7 @@
 
 (require 'init-calendar)
 (require 'init-elfeed)
-;;------------------------------------------------------------------------------
+;;-------------------------------------------------------------------------
 (require 'init-http)
 (require 'init-xxxml)
 (require 'init-csv)
@@ -88,7 +88,7 @@
 (require 'init-sql)
 (require 'init-ess)
 (require 'init-tex)
-;;------------------------------------------------------------------------------
+;;-------------------------------------------------------------------------
 ;; (require 'init-cnfonts)
 ;; (require 'init-game)
 (require 'init-mail)

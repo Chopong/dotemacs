@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ delete-this-file
+ all-the-icons-install-fonts
+ smart-mode-line-enable
+ telephone-line-mode
  mu4e
  package-autoremove
  package-list-packages
- message-mail
- swiper-at-point
- cnfonts-edit-profile
- ag
 )
 
 ;; ----- smex-data -----
 (
- (delete-this-file . 17)
+ (delete-this-file . 19)
  (enable-ivy-flx-matching . 2)
  (ivy-avy . 1)
  (sanityinc/counsel-search-project . 1)
@@ -54,7 +54,7 @@
  (counsel-git . 1)
  (avy-goto-char . 2)
  (avy-goto-char-timer . 1)
- (all-the-icons-install-fonts . 1)
+ (all-the-icons-install-fonts . 2)
  (cfw:open-calendar-buffer . 3)
  (elfeed . 3)
  (elfeed-update . 1)
@@ -110,4 +110,6 @@
  (paredit-mode . 4)
  (message-mail . 1)
  (mu4e . 11)
+ (telephone-line-mode . 1)
+ (smart-mode-line-enable . 1)
 )

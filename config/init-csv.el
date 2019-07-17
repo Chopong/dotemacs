@@ -8,10 +8,10 @@
 ;;; Code:
 
 
-(use-package csv-mode :ensure t :defer 2
+(use-package csv-mode :ensure t :defer t
   :mode ("\\.[Cc][Ss][Vv]\\'" . csv-mode)
   :config
   (setq csv-separators '("," ";" "|" " ")))
 
 (provide 'init-csv)
-;; init-csv.el ends here
+;;; init-csv.el ends here
