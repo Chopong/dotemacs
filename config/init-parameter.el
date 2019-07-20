@@ -24,7 +24,8 @@
 
 (defconst user-assets-directory
   (expand-file-name "assets/" user-emacs-directory))
-(setq-default default-directory user-emacs-directory)
+(setq-default default-directory "~/Documents/File/")
+;; (setq-default default-directory user-emacs-directory)
 (setq custom-file
       (expand-file-name "custom.el" user-assets-directory))
 
