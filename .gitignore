@@ -5,3 +5,5 @@ assets/custom.el
 assets/ditaa0_9.jar
 assets/plantuml.jar
 assets/forge-database.sqlite
+anaconda-mode/
+.cache

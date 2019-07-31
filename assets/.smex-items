@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ ag
  describe-coding-system
  describe-current-coding-system
  package-autoremove
  thumbs
  esup
  mu4e
- delete-this-file
 )
 
 ;; ----- smex-data -----
@@ -30,7 +30,7 @@
  (headerise-elisp . 1)
  (dash-at-point . 1)
  (origami-mode . 2)
- (ag . 21)
+ (ag . 22)
  (other-window . 2)
  (other-frame . 1)
  (ffap-dired-other-frame . 1)
