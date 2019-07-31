@@ -44,11 +44,11 @@
   (fullframe magit-status magit-mode-quit-window)
   )
 
-(use-package magithub :ensure t :defer t
-  :after magit
-  :config
-  (magithub-feature-autoinject t)
-  (setq magithub-clone-default-directory "~/Downloads/"))
+;; (use-package magithub :ensure t :defer t
+;;   :after magit
+;;   :config
+;;   (magithub-feature-autoinject t)
+;;   (setq magithub-clone-default-directory "~/Downloads/"))
 
 (use-package magit-todos          :ensure t :defer t)
 
