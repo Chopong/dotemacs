@@ -122,8 +122,8 @@ This command currently blocks the UI, sorry."
     (add-to-list 'dash-at-point-mode-alist '(sql-mode . "psql,mysql,sqlite,postgis"))))
 
 
-(after-load 'page-break-lines
-  (push 'sql-mode page-break-lines-modes))
+;; (after-load 'page-break-lines
+;;   (push 'sql-mode page-break-lines-modes))
 
 (provide 'init-sql)
 ;;; init-sql.el ends here

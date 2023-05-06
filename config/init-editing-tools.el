@@ -98,10 +98,10 @@
 ;;----------------------------------------------------------------------------
 ;; Page break lines
 ;;----------------------------------------------------------------------------
-(use-package page-break-lines :ensure t :defer t
-  :pin melpa-stable
-  :diminish page-break-lines-mode
-  :hook (after-init . global-page-break-lines-mode))
+;; (use-package page-break-lines :ensure t :defer t
+;;   :pin melpa-stable
+;;   :diminish page-break-lines-mode
+;;   :hook (after-init . global-page-break-lines-mode))
 
 
 

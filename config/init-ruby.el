@@ -75,7 +75,7 @@
 
 
 
-(use-package goto-gem :ensure t :defer t)
+;; (use-package goto-gem :ensure t :defer t)
 
 
 (use-package bundler :ensure t :defer t)
