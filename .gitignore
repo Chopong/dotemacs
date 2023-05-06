@@ -4,7 +4,7 @@ transient/.*
 assets/.*
 assets/.savehist
 assets/.sessions
-assets/.cache
+assets/.cache/
 assets/custom.el
 assets/ditaa0_9.jar
 assets/plantuml.jar
