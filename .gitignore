@@ -2,9 +2,12 @@ elpa/
 transient/
 transient/.*
 assets/.*
-assets/.savehist
-assets/.sessions
-assets/.cache/
+assets/\.savehist
+assets/\.sessions
+assets/\.smex-items
+assets/\.recentf
+assets/\.projectile-bookmarks
+assets/\.cache/
 assets/custom.el
 assets/ditaa0_9.jar
 assets/plantuml.jar
