@@ -12,3 +12,4 @@ anaconda-mode/
 \.cache/.*
 \.cache/
 \.DS_store
+\#.*
