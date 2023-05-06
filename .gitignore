@@ -1,5 +1,6 @@
 elpa/
 transient/
+transient/.*
 assets/.*
 assets/.savehist
 assets/.sessions
