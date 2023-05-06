@@ -16,6 +16,8 @@
 				 (t "~/.emacs.d/")))
 (add-to-list 'load-path
 	     (expand-file-name "config" user-emacs-directory))
+
+(require 'early-init) ;; load this file if emacs version is 27+
 ;;--------------------------------------------------------------------------
 (require 'init-parameter)
 (require 'init-plugins)

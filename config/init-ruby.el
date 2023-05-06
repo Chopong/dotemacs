@@ -73,8 +73,6 @@
   (defalias 'ri 'yari)
   )
 
-
-
 ;; (use-package goto-gem :ensure t :defer t)
 
 

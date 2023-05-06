@@ -8,14 +8,16 @@
 ;;; Code:
 
 
-(eval-when-compile (require 'cl))
+;; (eval-when-compile (require 'cl))
+(require 'cl-lib)
+
 (defun add-subdirs-to-load-path (parent-dir)
   "Add every non-hidden subdir of PARENT-DIR to `load-path'."
   (let* ((default-directory parent-dir))
     (progn
       (setq load-path
             (append
-             (remove-if-not
+             (cl-remove-if-not
               (lambda (dir) (file-directory-p dir))
               (directory-files (expand-file-name parent-dir) t "^[^\\.]"))
              load-path)))))
@@ -46,10 +48,9 @@
     (byte-compile-file (download-plugins-module name url))))
 
 (defun plugins-library-loadable-p (name)
-  "Return whether or not the library `name' can be loaded from a
-source file under ~/.emacs.d/plugins/name/"
+  "Return whether or not the library `NAME' can be loaded from a source file under ~/.emacs.d/plugins/name/."
   (let ((f (locate-library (symbol-name name))))
     (and f (string-prefix-p (file-name-as-directory (plugins-dir-for name)) f))))
 
 (provide 'init-plugins)
-;; init-plugins.el ends here
+;;; init-plugins.el ends here

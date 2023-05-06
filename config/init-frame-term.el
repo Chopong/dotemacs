@@ -23,6 +23,8 @@ Selectively runs either `after-make-console-frame-hooks' or
                  'after-make-console-frame-hooks))))
 
 (add-hook 'after-make-frame-functions 'run-after-make-frame-hooks)
+(add-hook 'after-make-window-system-frame-hooks 'chopong-default-alpha)
+(add-hook 'after-make-window-system-frame-hooks 'chopong-default-frame)
 
 (defconst initial-frame (selected-frame)
   "The frame (if any) active during Emacs initialization.")

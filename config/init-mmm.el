@@ -17,4 +17,4 @@
 
 
 (provide 'init-mmm)
-;; init-mmm.el ends here
+;;; init-mmm.el ends here

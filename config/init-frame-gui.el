@@ -63,7 +63,6 @@
   (add-to-list 'initial-frame-alist no-border))
 
 
-
 (defun adjust-opacity (frame incr)
   "Adjust the background opacity of FRAME by increment INCR."
   (unless (display-graphic-p frame)
@@ -76,11 +75,35 @@
     (when (and (<= frame-alpha-lower-limit newalpha) (>= 100 newalpha))
       (modify-frame-parameters frame (list (cons 'alpha newalpha))))))
 
+;; TODO: use seethru package instead?
+(global-set-key (kbd "M-C-8") (lambda () (interactive) (adjust-opacity nil -2)))
+(global-set-key (kbd "M-C-9") (lambda () (interactive) (adjust-opacity nil 2)))
+(global-set-key (kbd "M-C-7") (lambda () (interactive) (modify-frame-parameters nil `((alpha . 100)))))
+
+(defun chopong-default-alpha ()
+  "This func is built for init whindow hook with alpha 90."
+  (modify-frame-parameters nil `((alpha . 90)))
+  )
+
+(defun chopong-default-frame ()
+  "This func is built for init frame with frame size."
+  (interactive)
+  (if window-system
+      (progn
+        (set-frame-position (selected-frame) 100 50)
+        (if (> (x-display-pixel-width) 2000)
+            (set-frame-width (selected-frame) 240)
+          (set-frame-width (selected-frame) 120))
+        (if (> (x-display-pixel-height) 1000)
+            (set-frame-height (selected-frame) 90)
+          (set-frame-height (selected-frame) 60))
+        )))
+
 
 (when (and *is-a-mac* (fboundp 'toggle-frame-fullscreen))
   ;; Command-Option-f to toggle fullscreen mode
   ;; Hint: Customize `ns-use-native-fullscreen'
-  (global-set-key (kbd "M-ƒ") 'toggle-frame-fullscreen))
+  (global-set-key (kbd "<f12>") 'toggle-frame-fullscreen))
 
 
 ;; TODO: use seethru package instead?
@@ -106,9 +129,9 @@
   :hook (after-init . default-text-scale-mode))
 
 
-(use-package disable-mouse :ensure t)
-(set-cursor-color "gray")
-(set-mouse-color "gold1")
+;; (use-package disable-mouse :ensure t)
+;; (set-cursor-color "gray")
+;; (set-mouse-color "gold1")
 
 ;; (use-package thumbs :ensure nil :defer t
 ;;   :init

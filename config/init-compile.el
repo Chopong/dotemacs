@@ -24,9 +24,6 @@
     (add-hook 'compilation-finish-functions 'alert-after-compilation-finish))
   )
 
-
-
-
 (setq-default compilation-scroll-output t)
 
 
@@ -51,7 +48,6 @@
   (advice-add 'recompile :around 'find-prev-compilation))
 
 (global-set-key [f6] 'recompile)
-
 
 (defun shell-command-in-view-mode (start end command &optional output-buffer replace &rest other-args)
   "Put \"*Shell Command Output*\" buffers into view-mode."

@@ -11,7 +11,7 @@
   :config
   (setq-default ivy-use-virtual-buffers      t
 		ivy-virtual-abbreviate       'fullpath
-		ivy-count-format             ""
+		ivy-count-format             "(%d/%d)"
 		projectile-completion-system 'ivy
 		ivy-magic-tilde              nil
 		ivy-dynamic-exhibit-delay-ms 150
@@ -78,7 +78,6 @@ instead."
 (use-package ivy-xref :ensure t :defer 1
   :config
   (setq xref-show-xrefs-function 'ivy-xref-show-xrefs))
-
 
 (provide 'init-ivy)
 ;;; init-ivy.el ends here

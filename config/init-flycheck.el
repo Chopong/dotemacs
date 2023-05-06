@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(use-package flycheck                 :ensure t :defer t
+(use-package flycheck                 :ensure t :defer nil
   :hook (after-init . global-flycheck-mode)
   :config
   (setq flycheck-display-errors-function #'flycheck-display-error-messages-unless-error-list)
@@ -21,7 +21,10 @@
                  (window-height   . 0.33)))
   (setq flycheck-emacs-lisp-load-path 'inherit)
   (setq flycheck-emacs-lisp-package-user-dir
-        (expand-file-name "elpa/" user-emacs-directory)))
+        (expand-file-name "elpa/" user-emacs-directory))
+  ;; (use-package flycheck-color-mode-line
+  ;;   :hook (flycheck-mode . flycheck-color-mode-line-mode))
+  )
 
 ;; C-c ! v
 ;; C-c ! n

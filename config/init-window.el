@@ -85,9 +85,6 @@ Call a second time to restore the original window configuration."
 (global-set-key (kbd "<f7>") 'show-split-window)
 
 
-
-
-
 (defun toggle-current-window-dedication ()
   "Toggle whether the current window is dedicated to its current buffer."
   (interactive)
@@ -99,7 +96,6 @@ Call a second time to restore the original window configuration."
              (buffer-name))))
 
 (global-set-key (kbd "C-c <down>") 'toggle-current-window-dedication)
-
 
 
 (unless (memq window-system '(nt w32))

@@ -353,6 +353,8 @@ ORIG is the advised function, which is called with its ARGS."
 
 (advice-add 'kmacro-call-macro :around 'disable-features-during-macro-call)
 
+;; (global-set-key (kbd "<f3>") 'kmacro-start-macro)
+;; (global-set-key (kbd "<f4>") 'kmacro-end-or-call-macro)
 
 (provide 'init-editing-tools)
 ;;; init-editing-tools.el ends here

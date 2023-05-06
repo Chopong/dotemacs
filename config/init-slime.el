@@ -7,15 +7,15 @@
 
 ;;; Code:
 
-(use-package slime :ensure t :defer 2)
+(use-package slime :ensure t :defer t)
 ;; package.el compiles the contrib subdir, but the compilation order
 ;; causes problems, so we remove the .elc files there. See
 ;; http://lists.common-lisp.net/pipermail/slime-devel/2012-February/018470.html
 (mapc #'delete-file
       (file-expand-wildcards (concat user-emacs-directory "elpa/slime-2*/contrib/*.elc")))
 
-(use-package hippie-expand-slime :ensure t :defer 2)
-(use-package slime-company       :ensure t :defer 2)
+(use-package hippie-expand-slime :ensure t :defer t)
+(use-package slime-company       :ensure t :defer t)
 
 
 ;;; Lisp buffers

@@ -88,5 +88,47 @@
         (error "Cannot open tramp file")
       (browse-url (concat "file://" file-name)))))
 
+;; (defun chopong-find-Olymath (mathset)
+;;   "Create  MATHSET."
+;;   (interactive "sMathSet:")
+;;   (find-file-other-window (concat "~/Documents/OlympicMath/ProblemSetLib/" mathset)))
+;; (global-set-key (kbd "C-c f") 'chopong-find-Olymath)
+
+;; (defun chopong-insert-mathset ()
+;;   "Insert MATHSET to Latex document."
+;;   (interactive)
+;;   (let ((buf (current-buffer)))
+;;     (kill-ring-save (and (goto-char (point-min)) (forward-line 14) (point)) (point-max))
+;;     ;;(switch-window)
+;;     (delete-window)
+;;     (kill-buffer buf)
+;;     (yank)))
+
+;; (global-set-key (kbd "C-c v") 'chopong-insert-mathset)
+
+
+;; (defun chopong-zhihu-tex ()
+;;   "Trans Zhihu math encironment to tex format"
+;;   (interactive)
+;;   (goto-char (point-min))
+;;   (replace-regexp "<img src=\"[^\"]+\"[^>]+data-formula=\"\\([^\"]+\\)\">" "\$\\1\$")
+;;   (goto-char (point-min))
+;;   (replace-regexp "<b>\([^<]+\)</b>" "\\textbf{\\1}")
+;;   (goto-char (point-min))
+;;   (replace-regexp "<[^>]+>" "\n")
+;;   (goto-char (point-min))
+;;   (replace-regexp "&amp;" "\n")
+;;   (goto-char (point-min))
+;;   (replace-regexp "^[^\$]\(\$\\begin\)" "\$\\1")
+;;   (goto-char (point-min))
+;;   (replace-regexp "\(\\end{[a-z]+}\$\)[^\$]" "\\1\$")
+;;   (goto-char (point-min))
+;;   )
+
+;; (defun chopong-zhihu-yank ()
+;;   "Paste tex-form from zhihu html"
+;;   ())
+
+
 (provide 'init-functions)
 ;;; init-functions.el ends here

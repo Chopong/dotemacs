@@ -15,10 +15,26 @@
   :config
   (progn
     (setq org-projectile-projects-file
-          "~/Documents/File/Org/projects.org")
+          "/Volumes/MacFile/Notebook/projects.org")
     (setq org-agenda-files (append org-agenda-files (org-projectile-todo-files)))
-    (push (org-projectile-project-todo-entry) org-capture-templates))
+    (setq org-capture-templates
+          '(("t" "Todo" entry (file+headline "inbox.org" "Tasks")
+             "* TODO %?\n  %i\n  %u\n  %a")
+            ("n" "Note/Data" entry (file+headline "inbox.org" "Notes/Data")
+             "* %?   \n  %i\n  %u\n  %a")
+            ("j" "Journal" entry (file+datetree "~/org/journal.org")
+             "* %?\nEntered on %U\n %i\n %a")
+            ("J" "Work-Journal" entry (file+datetree "~/org/wjournal.org")
+             "* %?\nEntered on %U\n %i\n %a")
+            ))
+    (setq org-irc-link-to-logs t)
+    (push (org-projectile-project-todo-entry) org-capture-templates)
+    )
   :ensure t)
+
+(use-package org-id :defer t
+  :init
+  (setq org-id-link-to-org-use-id 'create-if-interactive))
 
 
 

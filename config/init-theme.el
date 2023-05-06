@@ -18,8 +18,12 @@
 
 
 ;; (use-package poet-theme :ensure t :defer t)
-;;(use-package monokai :ensure t :defer t)
-(use-package dracula-theme :ensure t)
+;; (use-package monokai-theme :ensure t)
+
+;; (use-package moe-theme :ensure t)
+;; (use-package solarized-theme :ensure t :defer t)
+;; (use-package tomorrow-theme :ensure t :defer t)
+(use-package dracula-theme :ensure t :defer t)
 ;; (use-package doom-themes
 ;;   :ensure t
 ;;   :config
@@ -34,8 +38,6 @@
 ;;   ;; Corrects (and improves) org-mode's native fontification.
 ;;   (doom-themes-org-config)
 ;;   )
-
-
 
 (defun reapply-themes ()
   "Forcibly load the themes listed in `custom-enabled-themes'."

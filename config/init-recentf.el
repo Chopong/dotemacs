@@ -16,4 +16,4 @@
   :bind ("C-x C-r" . 'recentf-open-files))
 
 (provide 'init-recentf)
-;; init-recentf.el ends here
+;;; init-recentf.el ends here

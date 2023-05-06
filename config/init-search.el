@@ -25,6 +25,7 @@
 ;;------------------------------------------------------------------------------
 (use-package wgrep    :ensure t :defer t
   :config
+  (setq wgrep-auto-save-buffer t)
   (dolist (key (list (kbd "C-c C-q") (kbd "w")))
     (define-key grep-mode-map key 'wgrep-change-to-wgrep-mode)))
 

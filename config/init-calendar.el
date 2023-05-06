@@ -13,10 +13,6 @@
       display-time-use-mail-icon t
       )
 
-
-
-
-
 (use-package org-caldav :ensure t :defer t)
 
 (use-package calfw :ensure t :defer t
@@ -25,8 +21,6 @@
   :config
   (setq cfw:org-overwrite-default-keybinding t)
   )
-
-
 
 (provide 'init-calendar)
 ;;; init-calendar.el ends here

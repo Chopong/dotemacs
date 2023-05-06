@@ -16,4 +16,4 @@
   )
 
 (provide 'init-uniquify)
-;; init-uniquify.el ends here
+;;; init-uniquify.el ends here

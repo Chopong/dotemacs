@@ -52,5 +52,32 @@
 ;;          )))
 ;;   (org-agenda nil "a"))
 
+
+(setq org-log-done 'time)
+(setq org-agenda-start-on-weekday 0)
+
+(setq org-agenda-files (list "/Volumes/MacFile/Notebook/org/inbox.org"
+                             "/Volumes/MacFile/Notebook/org/email.org"
+                             "/Volumes/MacFile/Notebook/org/tasks.org"
+                             "/Volumes/MacFile/Notebook/org/wtasks.org"
+                             "/Volumes/MacFile/Notebook/org/journal.org"
+                             "/Volumes/MacFile/Notebook/org/wjournal.org"
+                             "/Volumes/MacFile/Notebook/org/kb.org"
+                             "/Volumes/MacFile/Notebook/org/wkb.org"
+                             ))
+(setq org-agenda-text-search-extra-files
+      (list "/Volumes/MacFile/Notebook/org/someday.org"
+            "/Volumes/MacFile/Notebook/org/config.org"
+            ))
+
+(setq org-refile-targets '((nil :maxlevel . 2)
+                           (org-agenda-files :maxlevel . 2)
+                           ("/Volumes/MacFile/Notebook/org/someday.org" :maxlevel . 2)
+                           ("/Volumes/MacFile/Notebook/org/templates.org" :maxlevel . 2)
+                           )
+      )
+(setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
+(setq org-refile-use-outline-path 'file)
+
 (provide 'init-org-agenda)
 ;;; init-org-agenda.el ends here

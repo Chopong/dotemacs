@@ -45,8 +45,5 @@
   (spaceline-all-the-icons--setup-paradox)
   (spaceline-all-the-icons--setup-neotree))
 
-
-
-
 (provide 'init-icons)
 ;;; init-icons.el ends here

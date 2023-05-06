@@ -33,7 +33,7 @@
 (setq user-full-name "Chopong")
 
 (setq-default make-backup-files nil)
-
+(setq-default fill-column 200)
 
 (provide 'init-parameter)
 ;;; init-parameter.el ends here

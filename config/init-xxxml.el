@@ -8,7 +8,11 @@
 ;;; Code:
 
 
-;haml nxml sgml toml yaml
+;; haml nxml sgml toml yaml html
+
+(use-package web-mode :ensure t :defer t
+  :mode ("\\.html?\\'" . 'web-mode)
+  )
 
 (use-package haml-mode :ensure t :defer 2
   :bind (:map haml-mode-map
@@ -74,13 +78,6 @@ indentation rules."
 (use-package yaml-mode :ensure t :defer 2
   :mode ("\\.yml\\.erb\\'" . yaml-mode)
   :hook (yaml-mode . goto-address-prog-mode))
-
-
-
-
-
-
-
 
 
 (provide 'init-xxxml)

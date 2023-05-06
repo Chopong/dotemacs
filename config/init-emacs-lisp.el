@@ -20,7 +20,7 @@
 ;;   :config
 ;;   (dashboard-setup-startup-hook)
 ;;   (setq dashboard-banner-logo-title (concat "Happy hacking, " user-login-name " - Emacs ♥ you!"))
-;;   (setq dashboard-startup-banner '3)
+;;   (setq dashboard-startup-banner '3) ;; num to choose emacs logo or path to choose the customized logo
 ;;   (setq dashboard-center-content t)
 ;;   (setq dashboard-show-shortcuts nil)
 ;;   (setq dashboard-items '((recents  . 5)
@@ -29,6 +29,39 @@
 ;;                           (agenda . 5)
 ;;                           (registers . 5))))
 
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook)
+  (setq dashboard-banner-logo-title (concat "Happy hacking, " user-login-name " - Emacs ♥ you!"))
+  (setq dashboard-startup-banner '3) ;; num to choose emacs logo or path to choose the customized logo
+  (setq dashboard-center-content t)
+  (setq dashboard-show-shortcuts t)
+  (setq dashboard-items '((recents  . 10)
+                          (bookmarks . 10)
+                          (agenda . 7)
+                          ))
+  (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+
+  ;; (setq dashboard-item-names '(("Recent Files:" . "Recently opened files:")
+  ;;                              ("Agenda for today:" . "Today's agenda:")
+  ;;                              ("Agenda for the coming week:" . "Agenda:")))
+
+  ;; (setq dashboard-set-heading-icons t)
+  ;; (dashboard-modify-heading-icons '((recents . "file-text")
+  ;;                                   (bookmarks . "book")))
+
+  (setq dashboard-set-init-info t) ;; show package init info in s.
+  (setq dashboard-set-footer nil) ;; inhibit footer messages
+
+  (setq dashboard-projects-switch-function 'counsel-projectile-switch-project-by-name)
+
+  ;; ;; org agenda
+  ;; (add-to-list 'dashboard-items '(agenda) t)
+  ;; (setq dashboard-week-agenda t)
+  ;; (setq dashboard-org-agenda-categories '("Tasks" "Appointments"))
+  ;; (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
+  )
 
 (defun headerise-elisp ()
   "Add minimal header and footer to an elisp buffer in order to placate flycheck."
@@ -248,7 +281,7 @@
 
 (use-package macrostep :ensure t :defer 1
   :bind (:map emacs-lisp-mode-map
-	      ("C-c e" . 'macrostep-expand)))
+              ("C-c e" . 'macrostep-expand)))
 
 
 
@@ -273,6 +306,7 @@
 (use-package cl-libify :ensure t :defer 1)
 
 ;; (use-package parinfer
+;;   :init (use-package lispy :ensure t)
 ;;   :ensure t
 ;;   :defer t
 ;;   :bind

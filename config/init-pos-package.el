@@ -21,10 +21,10 @@
 ;;----------------------------------------------------------------------------
 ;; Misc config - yet to be placed in separate files
 ;;----------------------------------------------------------------------------
-(add-auto-mode 'tcl-mode "^Portfile\\'")
+;; (add-auto-mode 'tcl-mode "^Portfile\\'")
 
-(add-hook 'prog-mode-hook 'goto-address-prog-mode)
-(setq goto-address-mail-face 'link)
+;; (add-hook 'prog-mode-hook 'goto-address-prog-mode)
+;; (setq goto-address-mail-face 'link)
 
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 (add-hook 'after-save-hook 'set-mode-for-new-scripts)
@@ -51,39 +51,40 @@
         (concat comint-password-prompt-regexp
                 "\\|^Please enter your password for user .*?:\\s *\\'")))
 
-(use-package regex-tool :ensure t :defer 2
-  :config
-  (setq-default regex-tool-backend 'perl))
+;; (use-package regex-tool :ensure t :defer 2
+;;   :config
+;;   (setq-default regex-tool-backend 'perl))
 
+(use-package buffer-expose :ensure t :defer t)
 
-(after-load 're-builder
-  ;; Support a slightly more idiomatic quit binding in re-builder
-  (define-key reb-mode-map (kbd "C-c C-k") 'reb-quit))
+;; (after-load 're-builder
+;;   ;; Support a slightly more idiomatic quit binding in re-builder
+;;   (define-key reb-mode-map (kbd "C-c C-k") 'reb-quit))
 
-(add-auto-mode 'conf-mode "^Procfile\\'")
+;; (add-auto-mode 'conf-mode "^Procfile\\'")
 
 ;;(pdf-tools)
 ;; (org-brain)
 ;; (dash)
 
-(use-package dumb-jump
-  :bind (("M-g o" . 'dumb-jump-go-other-window)
-         ("M-g j" . 'dumb-jump-go)
-         ("M-g i" . 'dumb-jump-go-prompt)
-         ("M-g x" . 'dumb-jump-go-prefer-external)
-         ("M-g z" . 'dumb-jump-go-prefer-external-other-window))
-  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
-  :ensure t :defer t)
+;; (use-package dumb-jump
+;;   :bind (("M-g o" . 'dumb-jump-go-other-window)
+;;          ("M-g j" . 'dumb-jump-go)
+;;          ("M-g i" . 'dumb-jump-go-prompt)
+;;          ("M-g x" . 'dumb-jump-go-prefer-external)
+;;          ("M-g z" . 'dumb-jump-go-prefer-external-other-window))
+;;   :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
+;;   :ensure t :defer t)
 
-(use-package paradox :ensure t :defer t)
-(use-package async :ensure t :defer t)
-;;(use-package helpful :ensure t :defer t)
+;; (use-package paradox :ensure t :defer t)
+;; (use-package async :ensure t :defer t)
+;; (use-package helpful :ensure t :defer t)
 ;; (use-package eyebrowse)
 ;; (use-package golden-ratio :ensure t :defer t
 ;;   :config
 ;;   (setq golden-ratio-auto-scale t))
-(use-package nov :ensure t :defer t
-  :mode ("\\.epub\\'" . nov-mode))
+;; (use-package nov :ensure t :defer t
+;;   :mode ("\\.epub\\'" . nov-mode))
 
 ;; (use-package crux :ensure t :defer t)
 
@@ -184,6 +185,7 @@
 (use-package unicode-fonts :ensure t
   :config (unicode-fonts-setup)
   :defer t)
+
 ;; (use-package hyde :ensure t :defer t
 ;;   :config (setq hyde-home "~/Documents/Blog"))
 
@@ -192,12 +194,23 @@
 ;; (use-package mu4e :ensure t :defer t)
 ;; (use-package mu4e-alert :ensure t :defer t)
 
-(use-package yafolding :ensure t :defer t)
+;; (use-package yafolding :ensure t :defer t)
 
 ;; (use-package eval-in-repl :ensure t :defer t
 ;;   :config (setq eir-repl-placement 'left))
 ;; (require 'eval-in-repl-python)
 ;; (require 'eval-in-repl-shell)
+
+(use-package origami :ensure t :defer t
+  :config
+  (define-key origami-mode-map (kbd "C-c f") 'origami-recursively-toggle-node)
+  (define-key origami-mode-map (kbd "C-c F") 'origami-toggle-all-nodes))
+
+(require 'server)
+(unless (server-running-p) (server-start))
+
+
+
 
 (provide 'init-pos-package)
 ;;; init-pos-package.el ends here
