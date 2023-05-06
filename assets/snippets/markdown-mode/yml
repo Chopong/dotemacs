@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: yml
+# key: yml
+# --
+---
+
+layout: ${1:post}
+date: `(format-time-string "%Y-%m-%d,%a,%T")`
+author: `user-full-name`
+email: `user-mail-address`
+categories:${2:数学习题}
+
+title: ${3:`(replace-regexp-in-string "^20[0-9]\\{1,2\\}-[0-9]\\{0,2\\}-[0-9]\\{1,2\\}-" "" (file-name-sans-extension (buffer-name)))`}
+subtitle: ${4:}
+tags:${5:}
+---

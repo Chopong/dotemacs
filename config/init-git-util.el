@@ -8,8 +8,8 @@
 ;;; Code:
 ;; (use-package git-gutter :ensure t)
 (use-package git-blamed           :ensure t :defer t)
-(use-package gitignore-mode       :ensure t :defer t)
-(use-package gitconfig-mode       :ensure t :defer t)
+;; (use-package gitignore-mode       :ensure t :defer t)
+;; (use-package gitconfig-mode       :ensure t :defer t)
 (use-package git-timemachine      :ensure t :defer t
   :bind ("C-x v t" . 'git-timemachine-toggle))
 (use-package git-commit           :ensure t :defer t

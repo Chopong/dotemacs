@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: matrix
+# key: mat
+# --
+
+\$\left\\{
+\begin{matrix}
+${1:line-1}\\\\
+${2:line-2}\\\\
+\end{matrix}
+\right.\$

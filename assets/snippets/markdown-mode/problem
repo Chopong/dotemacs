@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: problem
+# key: plm
+# ---
+
+\textbf{Question}:${1:Question}
+
+\textbf{Answer}:${2:Answer}
+
+\textbf{PS}:${3:Hint}
+

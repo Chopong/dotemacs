@@ -73,7 +73,7 @@ instead."
     (interactive (list (thing-at-point 'symbol)))
     (swiper sym))
   :bind (:map ivy-mode-map
-	      ("M-s /" . 'swiper-at-point)))
+	      ("C-s /" . 'swiper-at-point)))
 
 (use-package ivy-xref :ensure t :defer 1
   :config

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: head
+# key: head
+# --
+#+OPTIONS: ^:nil _:nil f:nil toc:t num:t
+#+title: $1
+#+STARTUP: showeverything
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{Songti SC}
+#+LATEX_HEADER: \usemintedstyle{autumn}

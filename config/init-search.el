@@ -39,7 +39,7 @@
 ;;------------------------------------------------------------------------------
 (use-package rg       :ensure t :defer t
   :bind ("M-?" . 'rg-project))
-(use-package deadgrep :ensure t :defer t :pin melpa-stable)
+;; (use-package deadgrep :ensure t :defer t :pin melpa-stable)
 
 ;;------------------------------------------------------------------------------
 

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: info
+# key: info
+# --
+
+Year: ${1:2020}
+Nth: ${2:\\}
+Region: ${3:China}
+CUP: ${4:\\}
+Grade: ${5:MS or HS}
+ID: ${6:\\}
+Note: ${7:Note}
+
+

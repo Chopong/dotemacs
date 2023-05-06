@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: question
+# key: qu
+# --
+
+\begin{cpquestion}[${1:习题}]
+
+\end{cpquestion}

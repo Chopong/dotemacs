@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: qiangji
+# key: qj
+# --
+
+\begin{Qiangji}{${1:School}}{${2:Year}}{${3:自主招生}}
+
+\end{Qiangji}

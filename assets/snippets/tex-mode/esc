@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: escape
+# key: esc
+# ---
+
+(*@ ${1:LaTeX Code} @*)

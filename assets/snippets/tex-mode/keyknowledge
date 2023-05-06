@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: keyknowledge
+# key: kk
+# --
+
+\keyknowledge{${1:知识点}}
